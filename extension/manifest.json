@@ -1,0 +1,24 @@
+{
+    "manifest_version":3,
+    "name":"Hate Speech Filter",
+    "version":"1.0",
+    "description":"Blurs hateful content using Perspective AI through a secure server",
+    "permissions":["scripting","activeTab"],
+    "host_permissions":["https://*/*"],
+    "content_scripts":[
+        {
+            "matches":["https://*/*"],
+            "js":["content.js"],
+            "css":["styles.css"],
+            "run_at":"document_idle"
+        }
+    ],
+    "web_accessible_resources":[{
+        "resources":["styles.css"],
+        "matches":["https://*/*"]
+    }],
+    "action":{
+        "default_popup":"popup.html",
+        "default_icon":"icon.png"
+    }
+}

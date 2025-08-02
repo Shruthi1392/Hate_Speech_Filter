@@ -1,0 +1,17 @@
+.hateful-blur {
+    filter: blur(5px);
+    position: relative;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.hateful-blur::after {
+    content: "Click to reveal";
+    color: white;
+    position: absolute;
+    top: 0;
+    left:0;
+    background: black;
+    padding: 2px 4px;
+    font-size: 12pxS;
+}
